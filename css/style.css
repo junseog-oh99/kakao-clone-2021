@@ -5,13 +5,16 @@
 @import "components/nav-bar.css";
 @import "components/screen-header.css";
 @import "components/user-component.css";
+@import "components/dots.css";
 @import "screens/login.css";
 @import "screens/friends.css";
+@import "screens/find.css";
 @import "components/badge.css";
 
 body {
   font-family: "Open Sans", sans-serif;
   color: #2f363e;
+  height: 900px;
 }
 .main-screen {
   padding: 0px var(--horizontal-space);
