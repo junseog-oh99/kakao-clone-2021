@@ -1,6 +1,7 @@
 #chat-screen {
   background-color: #abc1d1;
   height: 1000vh;
+  overflow: visible;
 }
 #chat-screen .alt-header,
 #chat-screen .status-bar {
@@ -41,10 +42,35 @@
   font-size: 14px;
   margin-bottom: 30px;
 }
+@keyframes fadein_left {
+  from {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes fadein_right {
+  from {
+    transform: translateX(60px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.message__info{
+  animation: fadein_right 0.7s ease-in-out;
+}
+
 .message-row {
   display: flex;
   width: 100%;
   margin-bottom: 25px;
+  animation: fadein_left 0.7s ease-in-out;
 }
 .message-row__img {
   width: 45px;
@@ -57,6 +83,7 @@
   font-size: 20px;
   display: block;
   padding-bottom: 12px;
+  
 }
 .message__bubble {
   background-color: white;
